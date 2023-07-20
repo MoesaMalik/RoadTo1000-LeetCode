@@ -1,22 +1,11 @@
-class Solution(object):
-    def isPalindrome(self, x):
-        """
-        :type x: int
-        :rtype: bool
-        """
-
-       
-        lst = []
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        x = str(x)
         
-        for j in str(x):
-            if j.isdigit() == False:
-                 return False
-            lst.append(int(j))
-            
-        
-        for i in range(len(lst)):
-            if lst[i] != lst[len(lst) - 1 -i]:
+        for i in range(len(x)):
+            if x[i] != x[len(x) -i -1]:
                 return False
-
-
+            
         return True
+                
+        
